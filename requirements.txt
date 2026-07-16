@@ -1,2 +1,8 @@
 Flask
 gunicorn
+requests
+cloudscraper
+beautifulsoup4
+lxml
+colorama
+urllib3
