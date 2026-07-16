@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<h1>Dashboard</h1>
+
+<br>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+    <div style="background:#1e293b;padding:20px;border-radius:12px;">
+        <h3>Toplam Kullanıcı</h3>
+        <h1>{{ total_users }}</h1>
+    </div>
+
+    <div style="background:#1e293b;padding:20px;border-radius:12px;">
+        <h3>Giriş Yapan</h3>
+        <h1>{{ current_user }}</h1>
+    </div>
+
+    <div style="background:#1e293b;padding:20px;border-radius:12px;">
+        <h3>Saat</h3>
+        <h1>{{ current_time }}</h1>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin Panel{% endblock %}</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,Helvetica,sans-serif;
+        }
+
+        body{
+            display:flex;
+            background:#0f172a;
+            color:white;
+        }
+
+        .sidebar{
+            width:250px;
+            min-height:100vh;
+            background:#111827;
+            padding:20px;
+        }
+
+        .sidebar h2{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .sidebar a{
+            display:block;
+            color:white;
+            text-decoration:none;
+            padding:12px;
+            margin-bottom:8px;
+            border-radius:8px;
+        }
+
+        .sidebar a:hover{
+            background:#2563eb;
+        }
+
+        .content{
+            flex:1;
+            padding:30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>ADMIN PANEL</h2>
+
+<a href="/dashboard">🏠 Dashboard</a>
+<a href="/users">👥 Users</a>
+
+<a href="/module1">💳 Adyen</a>
+<a href="/module2">💳 Braintree</a>
+<a href="/module3">💳 Clover</a>
+<a href="/module4">💳 FastSpring</a>
+<a href="/module5">💳 İyzico Charge</a>
+<a href="/module6">⭐ Puan</a>
+<a href="/module7">💳 Stripe Auth</a>
+<a href="/module8">💳 Stripe</a>
+<a href="/module9">💳 Worldpay</a>
+
+<a href="/settings">⚙️ Settings</a>
+<a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
